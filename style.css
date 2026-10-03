@@ -618,5 +618,47 @@ body {
     }
 }
 
+/* ==========================================================================
+   Display and Inline-Block Layout Practice
+   ========================================================================== */
+
+.inline-nav a {
+    display: inline-block;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.inline-nav a:hover {
+    color: #ff4757;
+}
+
+.inline-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.box {
+    display: inline-block;
+    width: 28%;
+    padding: 20px;
+    background-color: #334155;
+    color: #f8fafc;
+    margin: 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inline-footer {
+    margin-top: 30px;
+    padding: 15px;
+    color: #94a3b8;
+    text-align: center;
+}
+
+
 
 
