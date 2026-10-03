@@ -659,6 +659,48 @@ body {
     text-align: center;
 }
 
+/* ==========================================================================
+   Overflow & Float Layout Practice
+   ========================================================================== */
+
+.overflow-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.overflow-left-column {
+    width: 50%;
+    float: left;
+    background-color: #475569;
+    color: #f8fafc;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.overflow-right-column {
+    width: 50%;
+    float: right;
+    background-color: #10b981;
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.overflow-box {
+    width: 320px;
+    height: 120px;
+    background-color: #ef4444;
+    color: #ffffff;
+    padding: 12px;
+    overflow: auto;
+    margin: 25px auto 0 auto;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
 
 
 
