@@ -3,48 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Bài tập] Nhúng CSS vào trang HTML</title>
-    
-    <!-- Phần 3: External Style (Liên kết file CSS bên ngoài) -->
+    <title>Trang web của tôi</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Phần 2: Internal Style (Viết CSS bên trong thẻ <style> trong <head>) -->
-    <style>
-        .internal-heading {
-            color: #dc2626; /* Màu đỏ (Red) */
-            font-size: 1.5rem;
-        }
-
-        .internal-paragraph {
-            color: #d97706; /* Màu cam (Amber) */
-            font-size: 1rem;
-        }
-    </style>
 </head>
 <body>
 
-    <h1>Bài Thực Hành: Các Phương Pháp Nhúng CSS vào HTML</h1>
+    <h1 id="main-header">Trang web của tôi</h1>
 
-    <!-- PHẦN 1: INLINE STYLE -->
-    <div class="demo-section">
-        <div class="section-label">Phần 1: Inline Style (Nhúng trực tiếp vào thẻ HTML bằng thuộc tính style)</div>
-        <h2 style="color: #7c3aed; font-size: 1.5rem;">Tiêu đề sử dụng Inline CSS (Màu Tím)</h2>
-        <p style="color: #db2777; font-size: 1rem;">Đây là đoạn văn bản được định dạng màu sắc trực tiếp bằng thuộc tính style="color: #db2777;".</p>
-    </div>
+    <p class="bio-text">Xin chào! Tôi là một học viên lập trình web đam mê sáng tạo các sản phẩm công nghệ hữu ích.</p>
 
-    <!-- PHẦN 2: INTERNAL STYLE -->
-    <div class="demo-section">
-        <div class="section-label">Phần 2: Internal Style (Nhúng bằng thẻ &lt;style&gt; trong phần &lt;head&gt;)</div>
-        <h2 class="internal-heading">Tiêu đề sử dụng Internal CSS (Màu Đỏ)</h2>
-        <p class="internal-paragraph">Đây là đoạn văn bản được định dạng bằng bộ chọn CSS định nghĩa trong thẻ &lt;style&gt;.</p>
-    </div>
+    <ul class="hobby-list">
+        <li class="hobby-item">Đọc sách công nghệ</li>
+        <li class="hobby-item">Lập trình web (HTML/CSS/JS)</li>
+        <li class="hobby-item">Đi du lịch & Khám phá địa điểm mới</li>
+    </ul>
 
-    <!-- PHẦN 3: EXTERNAL STYLE -->
-    <div class="demo-section">
-        <div class="section-label">Phần 3: External Style (Nhúng tệp CSS bên ngoài qua thẻ &lt;link&gt;)</div>
-        <h2 class="external-heading">Tiêu đề sử dụng External CSS (Màu Xanh Dương)</h2>
-        <p class="external-paragraph">Đây là đoạn văn bản được định dạng bởi tệp style.css liên kết từ bên ngoài.</p>
-    </div>
+    <button id="action-btn">Nhấn vào đây</button>
 
 </body>
 </html>

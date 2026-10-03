@@ -1,44 +1,80 @@
-/* ==========================================================================
-   Phần 3: External CSS StyleSheet (css_embedding / style.css)
-   ========================================================================== */
-
-/* Styling chung cho trang demo */
+/* Element Selector - Đổi màu nền của trang */
 body {
+    background-color: #f1f5f9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
+    color: #334155;
     padding: 2rem;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
-    line-height: 1.6;
 }
 
-.demo-section {
-    background-color: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #cbd5e1;
-    padding: 1.5rem;
+/* ID Selector - Căn giữa tiêu đề h1 */
+#main-header {
+    text-align: center;
+    color: #1e293b;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.section-label {
-    font-weight: bold;
-    color: #64748b;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 0.4rem;
+/* Class Selector - Đoạn văn mô tả bản thân */
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #475569;
 }
 
-/* Các class định kiểu cho Phần 3 (External CSS) */
-.external-heading {
-    color: #2563eb; /* Màu xanh dương (Blue) */
-    font-size: 1.5rem;
+/* Grouping Selector & Class - Danh sách sở thích */
+.hobby-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2rem;
 }
 
-.external-paragraph {
-    color: #059669; /* Màu xanh lá (Emerald Green) */
+/* Pseudo-classes (:nth-child) - Định dạng danh sách với màu sắc khác nhau */
+.hobby-list li {
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 0.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.hobby-list li:nth-child(1) {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border-left: 4px solid #3b82f6;
+}
+
+.hobby-list li:nth-child(2) {
+    background-color: #dcfce7;
+    color: #166534;
+    border-left: 4px solid #22c55e;
+}
+
+.hobby-list li:nth-child(3) {
+    background-color: #fef3c7;
+    color: #92400e;
+    border-left: 4px solid #f59e0b;
+}
+
+/* ID Selector & Pseudo-class :hover - Nút bấm và hiệu ứng hover */
+#action-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.75rem;
     font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#action-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
