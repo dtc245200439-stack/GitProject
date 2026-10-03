@@ -9,44 +9,54 @@ body {
     background-color: #f4f4f4;
 }
 
-#menu ul {
-    margin: 0;
-    padding: 0;
-}
-
-#menu ul li {
-    list-style: none;
-    position: relative;
-    width: 120px;
-    height: 30px;
-    padding: 0 20px;
-    background-color: black;
-    line-height: 30px;
-    cursor: pointer;
-    border-bottom: 1px solid #222;
-}
-
-#menu ul li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-}
-
-#menu ul li:hover {
+#menu {
+    height: 35px;
     background-color: #333333;
 }
 
-/* Danh sách con (Submenu Dropdown) */
-#menu ul li ul {
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu ul li {
+    float: left;
+    position: relative;
+}
+
+#menu ul li a {
+    display: block;
+    width: 130px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #333333;
+}
+
+/* Đổi màu nền sang màu đỏ khi rê chuột vào mục menu */
+#menu ul li a:hover,
+#menu ul li:hover > a {
+    background-color: red;
+}
+
+/* Cấu hình vị trí và ẩn menu con */
+#menu ul ul {
     position: absolute;
-    top: 0;
-    left: 160px; /* Cố định vị trí xuất hiện của danh sách con */
+    top: 35px;
+    left: 0;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.2s, opacity 0.2s;
 }
 
-/* Hiển thị danh sách con khi di chuột qua phần tử danh sách ngoài */
+#menu ul ul li {
+    float: none;
+}
+
+/* Hiển thị menu con khi di chuột qua mục chọn của menu cha */
 #menu ul li:hover > ul {
     visibility: visible;
     opacity: 1;
