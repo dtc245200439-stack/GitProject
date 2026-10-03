@@ -3,46 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Cá Nhân</title>
+    <title>[Bài tập] Nhúng CSS vào trang HTML</title>
+    
+    <!-- Phần 3: External Style (Liên kết file CSS bên ngoài) -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Phần 2: Internal Style (Viết CSS bên trong thẻ <style> trong <head>) -->
+    <style>
+        .internal-heading {
+            color: #dc2626; /* Màu đỏ (Red) */
+            font-size: 1.5rem;
+        }
+
+        .internal-paragraph {
+            color: #d97706; /* Màu cam (Amber) */
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
-    </header>
 
-    <section class="profile">
-        <img src="avatar.jpg" alt="Ảnh đại diện" class="avatar">
-        <p>Xin chào! Tôi là <strong>Nguyễn Văn A</strong>, một lập trình viên yêu thích công nghệ.</p>
-    </section>
+    <h1>Bài Thực Hành: Các Phương Pháp Nhúng CSS vào HTML</h1>
 
-    <section class="hobbies">
-        <h2>Sở thích</h2>
-        <ul>
-            <li>Đọc sách</li>
-            <li>Chơi thể thao</li>
-            <li>Lập trình</li>
-            <li>Du lịch</li>
-        </ul>
-    </section>
+    <!-- PHẦN 1: INLINE STYLE -->
+    <div class="demo-section">
+        <div class="section-label">Phần 1: Inline Style (Nhúng trực tiếp vào thẻ HTML bằng thuộc tính style)</div>
+        <h2 style="color: #7c3aed; font-size: 1.5rem;">Tiêu đề sử dụng Inline CSS (Màu Tím)</h2>
+        <p style="color: #db2777; font-size: 1rem;">Đây là đoạn văn bản được định dạng màu sắc trực tiếp bằng thuộc tính style="color: #db2777;".</p>
+    </div>
 
-    <section class="goals">
-        <h2>Mục tiêu học tập</h2>
-        <p>Tôi muốn trở thành một lập trình viên chuyên nghiệp, xây dựng các sản phẩm hữu ích.</p>
-    </section>
+    <!-- PHẦN 2: INTERNAL STYLE -->
+    <div class="demo-section">
+        <div class="section-label">Phần 2: Internal Style (Nhúng bằng thẻ &lt;style&gt; trong phần &lt;head&gt;)</div>
+        <h2 class="internal-heading">Tiêu đề sử dụng Internal CSS (Màu Đỏ)</h2>
+        <p class="internal-paragraph">Đây là đoạn văn bản được định dạng bằng bộ chọn CSS định nghĩa trong thẻ &lt;style&gt;.</p>
+    </div>
 
-    <footer>
-        <h2>Thông tin liên hệ</h2>
-        <table border="1">
-            <tr>
-                <th>Email</th>
-                <td>nguyenvana@example.com</td>
-            </tr>
-            <tr>
-                <th>Facebook</th>
-                <td><a href="#">facebook.com/nguyenvana</a></td>
-            </tr>
-        </table>
-    </footer>
+    <!-- PHẦN 3: EXTERNAL STYLE -->
+    <div class="demo-section">
+        <div class="section-label">Phần 3: External Style (Nhúng tệp CSS bên ngoài qua thẻ &lt;link&gt;)</div>
+        <h2 class="external-heading">Tiêu đề sử dụng External CSS (Màu Xanh Dương)</h2>
+        <p class="external-paragraph">Đây là đoạn văn bản được định dạng bởi tệp style.css liên kết từ bên ngoài.</p>
+    </div>
+
 </body>
 </html>
