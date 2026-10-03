@@ -3,93 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Thực hành] Danh sách trong CSS</title>
-    <!-- 1. Liên kết file CSS -->
+    <title>[Thực hành] Bảng trong CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Bài Thực Hành: Định Kiểu Danh Sách HTML Với CSS</h1>
+    <h1>Bài Thực Hành: Định Kiểu Bảng Trong CSS</h1>
 
-    <!-- 2. Thay đổi kiểu đánh dấu danh sách không có thứ tự -->
+    <!-- 1. Đường viền bảng cơ bản (đường viền kép) -->
     <div class="demo-box">
-        <h2>2. Danh sách môn học (list-style-type: square)</h2>
-        <ul class="list-square">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>
-        </ul>
+        <h2>1. Đường viền bảng cơ bản (border: 1px solid black)</h2>
+        <table class="table-basic">
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
     </div>
 
-    <!-- 3. Thay đổi kiểu đánh dấu danh sách có thứ tự (Chữ La Mã) -->
+    <!-- 2. Bỏ đường viền kép với border-collapse: collapse -->
     <div class="demo-box">
-        <h2>3. Danh sách các bước học (list-style-type: upper-roman)</h2>
-        <ol class="list-roman">
-            <li>Học HTML</li>
-            <li>Học CSS</li>
-            <li>Học JavaScript</li>
-            <li>Học Git</li>
-        </ol>
+        <h2>2. Gộp đường viền với border-collapse: collapse</h2>
+        <table class="table-collapsed">
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
     </div>
 
-    <!-- 4. Sử dụng hình ảnh làm dấu đánh dấu -->
+    <!-- 3. Chiều rộng, chiều cao & Căn chỉnh ngang (text-align: left) -->
     <div class="demo-box">
-        <h2>4. Danh sách công cụ học tập (list-style-image)</h2>
-        <ul class="list-image">
-            <li>Visual Studio Code</li>
-            <li>Google Chrome</li>
-            <li>GitHub</li>
-            <li>Git</li>
-        </ul>
+        <h2>3. Kích thước (width: 100%, height: 50px) & Căn trái tiêu đề (text-align: left)</h2>
+        <table class="table-custom-align">
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
     </div>
 
-    <!-- 5. Thay đổi vị trí dấu đánh dấu (outside vs inside) -->
+    <!-- 4. Căn chỉnh theo chiều dọc (vertical-align: bottom) -->
     <div class="demo-box">
-        <h2>5. Vị trí dấu đánh dấu (list-style-position: outside & inside)</h2>
-        <p><strong>Outside (Mặc định):</strong></p>
-        <ul class="list-outside">
-            <li>Mục 1 - Dấu đánh dấu nằm bên ngoài khối nội dung.</li>
-            <li>Mục 2 - Khi dòng văn bản xuống hàng sẽ căn lề thẳng hàng với nội dung phía trên.</li>
-        </ul>
-
-        <p><strong>Inside:</strong></p>
-        <ul class="list-inside">
-            <li>Mục 1 - Dấu đánh dấu nằm bên trong khối nội dung.</li>
-            <li>Mục 2 - Khi dòng văn bản xuống hàng sẽ nằm ngay bên dưới dấu đánh dấu.</li>
-        </ul>
+        <h2>4. Căn chỉnh theo chiều dọc (vertical-align: bottom, height: 80px)</h2>
+        <table class="table-vertical-align">
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+        </table>
     </div>
 
-    <!-- 6. Sử dụng thuộc tính rút gọn list-style -->
+    <!-- 5. Padding & Màu sắc trong bảng hoàn thiện -->
     <div class="demo-box">
-        <h2>6. Thuộc tính rút gọn list-style</h2>
-        <ul class="list-shorthand">
-            <li>Phần tử 1 sử dụng list-style rút gọn.</li>
-            <li>Phần tử 2 kết hợp kiểu, vị trí và hình ảnh trong 1 dòng CSS.</li>
-        </ul>
-    </div>
-
-    <!-- 7. Tạo kiểu danh sách với màu sắc, padding & margin -->
-    <div class="demo-box">
-        <h2>7. Danh sách ngôn ngữ lập trình với Màu sắc & Khoảng cách</h2>
-        <ul class="colored-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
-    </div>
-
-    <!-- 8. Bài tập tổng hợp -->
-    <div class="demo-box">
-        <h2>8. Bài Tập Tổng Hợp: Lộ Trình Học Lập Trình Web</h2>
-        <ul class="roadmap-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>
-            <li>GitHub</li>
-        </ul>
+        <h2>5. Bảng hoàn thiện với Padding (15px) & Màu sắc (Header #333, Body #f2f2f2)</h2>
+        <table class="table-styled">
+            <tr>
+                <th>Họ tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+            </tr>
+            <tr>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Trần Thị B</td>
+                <td>21</td>
+                <td>Web</td>
+            </tr>
+            <tr>
+                <td>Lê Văn C</td>
+                <td>22</td>
+                <td>Web</td>
+            </tr>
+        </table>
     </div>
 
 </body>

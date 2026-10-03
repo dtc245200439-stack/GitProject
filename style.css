@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CSS Lists Lab - Định Kiểu Danh Sách HTML Với CSS
+   CSS Table Practice - Thực Hành Định Kiểu Bảng Trong CSS
    ========================================================================== */
 
 body {
@@ -23,7 +23,7 @@ h2 {
     color: #1e293b;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 .demo-box {
@@ -31,92 +31,81 @@ h2 {
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-/* 2. List Style Type Square */
-.list-square {
-    list-style-type: square;
-    padding-left: 1.5rem;
+/* 1. Bảng đường viền kép cơ bản */
+.table-basic, .table-basic th, .table-basic td {
+    border: 1px solid black;
 }
-
-/* 3. List Style Type Upper Roman */
-.list-roman {
-    list-style-type: upper-roman;
-    padding-left: 1.5rem;
-}
-
-/* 4. List Style Image (Dùng SVG Data URI icon ngôi sao xanh) */
-.list-image {
-    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%232563eb"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.784 1.399 8.166L12 18.896l-7.333 3.864 1.399-8.166L.132 9.21l8.2-1.192z"/></svg>');
-    padding-left: 1.5rem;
-}
-
-/* 5. List Style Position (Outside vs Inside) */
-.list-outside {
-    list-style-position: outside;
-    background-color: #f1f5f9;
-    padding: 1rem 2rem;
-    border-radius: 6px;
+.table-basic {
     margin-bottom: 1rem;
 }
 
-.list-inside {
-    list-style-position: inside;
-    background-color: #f1f5f9;
-    padding: 1rem 2rem;
-    border-radius: 6px;
+/* 2. Bảng border-collapse: collapse */
+.table-collapsed {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-collapsed, .table-collapsed th, .table-collapsed td {
+    border: 1px solid black;
 }
 
-/* 6. List Style Shorthand Property */
-.list-shorthand {
-    list-style: square inside;
-    padding: 1rem;
-    background-color: #eff6ff;
-    border-radius: 6px;
+/* 3. Chiều rộng 100% & Chiều cao th 50px & Căn trái tiêu đề */
+.table-custom-align {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-custom-align, .table-custom-align th, .table-custom-align td {
+    border: 1px solid #94a3b8;
+}
+.table-custom-align th {
+    height: 50px;
+    text-align: left;
+    background-color: #e2e8f0;
+    padding-left: 10px;
+}
+.table-custom-align td {
+    padding-left: 10px;
 }
 
-/* 7. Colored List with Padding & Margin */
-.colored-list {
-    background-color: #0f172a;
-    color: #f8fafc;
-    padding: 1.5rem 2.5rem;
-    border-radius: 8px;
-    list-style-type: disc;
+/* 4. Căn chỉnh dọc vertical-align: bottom & Height 80px */
+.table-vertical-align {
+    border-collapse: collapse;
+    width: 100%;
+}
+.table-vertical-align, .table-vertical-align th, .table-vertical-align td {
+    border: 1px solid #94a3b8;
+}
+.table-vertical-align td {
+    height: 80px;
+    vertical-align: bottom;
+    padding: 10px;
 }
 
-.colored-list li {
-    margin-bottom: 0.75rem;
-    padding: 0.4rem 0.8rem;
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 4px;
-    color: #38bdf8;
-    font-weight: 600;
+/* 5. Bảng có Padding 15px & Màu sắc tối ưu */
+.table-styled {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
 }
 
-/* 8. Bài Tập Tổng Hợp - Lộ Trình Học Lập Trình Web */
-.roadmap-list {
-    list-style: square inside;
-    background: linear-gradient(135deg, #1e1b4b, #312e81);
+.table-styled th {
+    background-color: #333333;
     color: #ffffff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(49, 46, 129, 0.3);
+    padding: 15px;
+    text-align: left;
+    font-size: 0.95rem;
 }
 
-.roadmap-list li {
-    margin: 0.8rem 0;
-    padding: 0.6rem 1.2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border-left: 4px solid #818cf8;
-    border-radius: 0 6px 6px 0;
-    font-weight: bold;
-    font-size: 1.05rem;
-    transition: transform 0.2s, background 0.2s;
+.table-styled td {
+    background-color: #f2f2f2;
+    color: #333333;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
 }
 
-.roadmap-list li:hover {
-    transform: translateX(6px);
-    background: rgba(255, 255, 255, 0.2);
+.table-styled tr:hover td {
+    background-color: #e2e8f0;
 }
