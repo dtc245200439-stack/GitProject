@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hướng dẫn tạo Fixed Menu</title>
+    <title>Thực hành Tạo Menu Dọc (Vertical Dropdown Menu)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div>
+    <h2 style="margin-bottom: 20px;">Menu Điều Hướng Dọc (Vertical Dropdown Menu)</h2>
 
-    <div class="main">
-        <h1>Fixed Top Menu</h1>
-        <h2>Scroll this page to see the effect</h2>
-        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Sản phẩm &#9656;</a>
+                <ul>
+                    <li><a href="#">Máy tính</a></li>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Dịch vụ &#9656;</a>
+                <ul>
+                    <li><a href="#">Bảo hành</a></li>
+                    <li><a href="#">Sửa chữa</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
     </div>
 
 </body>
