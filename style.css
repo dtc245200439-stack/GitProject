@@ -345,3 +345,37 @@ body {
         gap: 0.8rem;
     }
 }
+
+/* ==========================================================================
+   Float & Clear Two-Column Layout Practice
+   ========================================================================== */
+
+.container {
+    width: 100%;
+}
+
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* Xử lý float với clearfix */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
