@@ -1,54 +1,36 @@
-/* Thiết lập màu nền (background-color) cho trang web */
 body {
-    background-color: #f1f5f9;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #1e293b;
-    padding: 2rem;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-h1 {
-    color: #0f172a;
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
-.description {
-    color: #64748b;
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto 2.5rem;
-}
-
-/* Thêm ảnh nền (background-image) và căn giữa nội dung trong khối <div> */
-.hero-box {
-    background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    text-align: center; /* Căn giữa nội dung trong khối <div> */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-box h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #38bdf8;
-}
-
-.hero-box p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 500px;
-    margin: 0;
+.main {
+    padding: 16px;
+    margin-top: 50px;
+    height: 1500px; /* Dùng để hiển thị thanh cuộn */
+    background-color: #f9f9f9;
 }
