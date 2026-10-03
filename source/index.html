@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách sản phẩm</title>
+    <title>Lịch họp công ty</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,7 +17,7 @@
         }
         table {
             width: 100%;
-            max-width: 700px;
+            max-width: 800px;
             border-collapse: collapse;
             background: #ffffff;
             border-radius: 8px;
@@ -27,67 +27,83 @@
         th, td {
             padding: 1rem 1.25rem;
             text-align: left;
-            border-bottom: 1px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
         }
         th {
-            background-color: #2563eb;
+            background-color: #0284c7;
             color: #ffffff;
             font-weight: 600;
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 0.05em;
         }
-        tr:hover {
-            background-color: #f1f5f9;
+        .day-cell {
+            background-color: #f0f9ff;
+            font-weight: bold;
+            color: #0369a1;
+            vertical-align: middle;
+            text-align: center;
         }
-        tr:last-child td {
-            border-bottom: none;
+        .colspan-cell {
+            background-color: #fef3c7;
+            color: #92400e;
+            font-weight: 600;
+            text-align: center;
+        }
+        tr:hover {
+            background-color: #f8fafc;
         }
     </style>
 </head>
 <body>
 
-    <h1>Danh sách sản phẩm</h1>
+    <h1>Lịch họp công ty</h1>
 
     <table>
         <thead>
             <tr>
-                <th>STT</th>
-                <th>Tên sản phẩm</th>
-                <th>Giá (VND)</th>
-                <th>Số lượng</th>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
             </tr>
         </thead>
         <tbody>
+            <!-- Thứ Hai: 2 cuộc họp trong ngày -> rowspan="2" -->
             <tr>
-                <td>1</td>
-                <td>iPhone 15 Pro Max 256GB</td>
-                <td>29,990,000</td>
-                <td>15</td>
+                <td class="day-cell" rowspan="2">Thứ Hai<br>(06/10)</td>
+                <td>08:30 - 10:00</td>
+                <td>Họp giao ban đầu tuần & Triển khai kế hoạch dự án mới</td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>MacBook Pro M3 14 inch</td>
-                <td>39,990,000</td>
-                <td>8</td>
+                <td>14:00 - 16:30</td>
+                <td>Review thiết kế sản phẩm với đối tác khách hàng</td>
+            </tr>
+
+            <!-- Thứ Ba: Cuộc họp kéo dài cả ngày -> colspan="2" cho cột Giờ + Nội dung -->
+            <tr>
+                <td class="day-cell">Thứ Ba<br>(07/10)</td>
+                <td colspan="2" class="colspan-cell">
+                    08:00 - 17:00: Hội thảo Chiến lược Kinh doanh & Tập huấn nhân sự toàn công ty (Kéo dài cả ngày)
+                </td>
+            </tr>
+
+            <!-- Thứ Tư: 2 cuộc họp trong ngày -> rowspan="2" -->
+            <tr>
+                <td class="day-cell" rowspan="2">Thứ Tư<br>(08/10)</td>
+                <td>09:00 - 11:30</td>
+                <td>Phát triển phần mềm & Kiểm thử phiên bản mới</td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>Tai nghe Sony WH-1000XM5</td>
-                <td>6,990,000</td>
-                <td>20</td>
+                <td>13:30 - 15:30</td>
+                <td>Báo cáo tài chính quý & Phê duyệt ngân sách Marketing</td>
             </tr>
+
+            <!-- Thứ Sáu: Sự kiện kéo dài nhiều giờ -> colspan="2" -->
             <tr>
-                <td>4</td>
-                <td>iPad Air 5 M1 Wi-Fi 64GB</td>
-                <td>13,990,000</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Bàn phím cơ Keychron K2 V2</td>
-                <td>1,890,000</td>
-                <td>30</td>
+                <td class="day-cell">Thứ Sáu<br>(10/10)</td>
+                <td colspan="2" class="colspan-cell">
+                    13:00 - 18:00: Tổng kết dự án quý III & Vinh danh cá nhân xuất sắc
+                </td>
             </tr>
         </tbody>
     </table>
