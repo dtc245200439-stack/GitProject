@@ -1461,6 +1461,85 @@ body {
     overflow-x: auto;
 }
 
+/* ==========================================================================
+   CSS flex-basis Property Practice (Examples 1, 2, 3, 4)
+   ========================================================================== */
+
+.flex-basis-practice {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    text-align: center;
+}
+
+.basis-section {
+    margin-bottom: 40px;
+}
+
+.basis-section h3 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.basis-container {
+    display: flex;
+    gap: 10px;
+    border: 2px solid #0f172a;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    box-sizing: border-box;
+}
+
+.basis-item {
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    font-weight: bold;
+    color: #0f172a;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Ví dụ 1: flex-basis px */
+.basis-ex1 .item-200 { flex-basis: 200px; }
+.basis-ex1 .item-100 { flex-basis: 100px; }
+.basis-ex1 .item-150 { flex-basis: 150px; }
+
+/* Ví dụ 2: flex-direction: column */
+.basis-ex2 {
+    flex-direction: column;
+    height: 400px;
+}
+
+.basis-ex2 .basis-item {
+    flex-basis: 100px;
+    background-color: lightgreen;
+}
+
+/* Ví dụ 3: flex-basis: 50% */
+.basis-ex3 .basis-item {
+    flex-basis: 50%;
+    background-color: lightcoral;
+}
+
+/* Ví dụ 4: Kết hợp flex-basis với flex-grow */
+.basis-ex4 {
+    width: 600px;
+}
+
+.basis-ex4 .basis-item {
+    flex-basis: 100px;
+    background-color: lightblue;
+}
+
+.basis-ex4 .grow-1 { flex-grow: 1; }
+.basis-ex4 .grow-2 { flex-grow: 2; background-color: #38bdf8; color: white; }
+
+
 
 
 

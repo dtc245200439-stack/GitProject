@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex-basis Property Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex-basis-practice">
+        <h2>Thực hành Thuộc tính CSS flex-basis</h2>
+
+        <!-- Ví dụ 1: flex-basis với đơn vị px -->
+        <section class="basis-section">
+            <h3>Ví dụ 1: Sử dụng flex-basis với đơn vị px (Trục chính chiều ngang)</h3>
+            <div class="basis-container basis-ex1">
+                <div class="basis-item item-200">Item 1 (200px)</div>
+                <div class="basis-item item-100">Item 2 (100px)</div>
+                <div class="basis-item item-150">Item 3 (150px)</div>
+            </div>
+        </section>
+
+        <!-- Ví dụ 2: flex-basis với flex-direction: column -->
+        <section class="basis-section">
+            <h3>Ví dụ 2: flex-basis theo chiều dọc (flex-direction: column)</h3>
+            <div class="basis-container basis-ex2">
+                <div class="basis-item">Item 1 (100px Height)</div>
+                <div class="basis-item">Item 2 (100px Height)</div>
+                <div class="basis-item">Item 3 (100px Height)</div>
+            </div>
+        </section>
+
+        <!-- Ví dụ 3: flex-basis với phần trăm % -->
+        <section class="basis-section">
+            <h3>Ví dụ 3: flex-basis với phần trăm (flex-basis: 50%)</h3>
+            <div class="basis-container basis-ex3">
+                <div class="basis-item">Item 1 (50%)</div>
+                <div class="basis-item">Item 2 (50%)</div>
+            </div>
+        </section>
+
+        <!-- Ví dụ 4: Kết hợp flex-basis với flex-grow -->
+        <section class="basis-section">
+            <h3>Ví dụ 4: Kết hợp flex-basis (100px) với flex-grow (1 : 2 : 1)</h3>
+            <div class="basis-container basis-ex4">
+                <div class="basis-item grow-1">Item 1 (grow: 1)</div>
+                <div class="basis-item grow-2">Item 2 (grow: 2)</div>
+                <div class="basis-item grow-1">Item 3 (grow: 1)</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
