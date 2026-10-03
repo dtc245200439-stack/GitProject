@@ -1,80 +1,54 @@
-/* Element Selector - Đổi màu nền của trang */
+/* Thiết lập màu nền (background-color) cho trang web */
 body {
     background-color: #f1f5f9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #334155;
-    padding: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* ID Selector - Căn giữa tiêu đề h1 */
-#main-header {
-    text-align: center;
     color: #1e293b;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    padding: 2rem;
+    margin: 0;
+    text-align: center;
 }
 
-/* Class Selector - Đoạn văn mô tả bản thân */
-.bio-text {
+h1 {
+    color: #0f172a;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Thêm ảnh nền (background-image) và căn giữa nội dung trong khối <div> */
+.hero-box {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center; /* Căn giữa nội dung trong khối <div> */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #38bdf8;
+}
+
+.hero-box p {
     font-size: 1.1rem;
     line-height: 1.6;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #475569;
-}
-
-/* Grouping Selector & Class - Danh sách sở thích */
-.hobby-list {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 2rem;
-}
-
-/* Pseudo-classes (:nth-child) - Định dạng danh sách với màu sắc khác nhau */
-.hobby-list li {
-    padding: 0.8rem 1.2rem;
-    margin-bottom: 0.6rem;
-    border-radius: 6px;
-    font-weight: 600;
-}
-
-.hobby-list li:nth-child(1) {
-    background-color: #dbeafe;
-    color: #1e40af;
-    border-left: 4px solid #3b82f6;
-}
-
-.hobby-list li:nth-child(2) {
-    background-color: #dcfce7;
-    color: #166534;
-    border-left: 4px solid #22c55e;
-}
-
-.hobby-list li:nth-child(3) {
-    background-color: #fef3c7;
-    color: #92400e;
-    border-left: 4px solid #f59e0b;
-}
-
-/* ID Selector & Pseudo-class :hover - Nút bấm và hiệu ứng hover */
-#action-btn {
-    display: block;
-    margin: 0 auto;
-    background-color: #2563eb;
-    color: #ffffff;
-    border: none;
-    padding: 0.75rem 1.75rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#action-btn:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    max-width: 500px;
+    margin: 0;
 }
