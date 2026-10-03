@@ -1238,6 +1238,66 @@ body {
     color: #0f172a;
 }
 
+/* ==========================================================================
+   CSS Grid Webpage Layout Practice (grid-template-areas, Desktop & Mobile)
+   ========================================================================== */
+
+.grid-layout-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "footer footer";
+    min-height: 100vh;
+}
+
+.grid-header {
+    grid-area: header;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.grid-sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #1e293b;
+}
+
+.grid-content {
+    grid-area: content;
+    padding: 20px;
+    color: #1e293b;
+    background-color: #ffffff;
+}
+
+.grid-footer {
+    grid-area: footer;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid-layout-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "content"
+            "footer";
+    }
+}
+
+
 
 
 

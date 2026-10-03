@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Webpage Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-layout-container">
+        <header class="grid-header">Header (Trang Chủ CSS Grid)</header>
+        <nav class="grid-sidebar">
+            <h3>Sidebar Navigation</h3>
+            <ul style="list-style: none; padding-top: 10px; line-height: 2;">
+                <li><a href="#" style="color: #0f172a; text-decoration: none;">Mục 1: Tổng quan</a></li>
+                <li><a href="#" style="color: #0f172a; text-decoration: none;">Mục 2: Dịch vụ</a></li>
+                <li><a href="#" style="color: #0f172a; text-decoration: none;">Mục 3: Tin tức</a></li>
+                <li><a href="#" style="color: #0f172a; text-decoration: none;">Mục 4: Liên hệ</a></li>
+            </ul>
+        </nav>
+        <main class="grid-content">
+            <h2>Khu Vực Nội Dung Chính (Main Content)</h2>
+            <p style="margin-top: 10px; line-height: 1.6;">Đây là khu vực nội dung chính được dàn trang bằng thuộc tính CSS Grid <code>grid-template-areas</code>. Khi mở trên Desktop, Sidebar chiếm 1 phần (1fr) và Nội dung chính chiếm 3 phần (3fr). Khi thu nhỏ trên Mobile (&lt; 768px), bố cục sẽ tự động chuyển thành dạng 1 cột xếp chồng dọc gọn gàng.</p>
+        </main>
+        <footer class="grid-footer">&copy; 2026 CSS Grid Webpage Layout. All rights reserved.</footer>
+    </div>
+</body>
+</html>
