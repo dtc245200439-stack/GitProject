@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flexbox-site-container">
+        <header class="flexbox-header">Header (Trang Chủ Flexbox Website)</header>
+        <nav class="flexbox-nav">Navigation Menu (Trang chủ | Dịch vụ | Tin tức | Liên hệ)</nav>
+        <div class="flexbox-main-container">
+            <main class="flexbox-content">
+                <h2>Main Content (Nội Dung Chính)</h2>
+                <p style="margin-top: 10px; line-height: 1.6;">Đây là khu vực nội dung chính được điều hướng linh hoạt bằng thuộc tính Flexbox <code>flex: 3</code>. Trên màn hình Desktop, Content chiếm 3 phần và Sidebar chiếm 1 phần. Khi thu nhỏ trên Mobile (&lt; 768px), <code>.main-container</code> chuyển thành <code>flex-direction: column</code> giúp Sidebar hiển thị gọn gàng bên dưới Content.</p>
+            </main>
+            <aside class="flexbox-sidebar">
+                <h3>Sidebar (Nội Dung Phụ)</h3>
+                <p style="margin-top: 10px;">Quảng cáo, bài viết đọc nhiều và liên kết mở rộng.</p>
+            </aside>
+        </div>
+        <footer class="flexbox-footer">&copy; 2026 Flexbox Web Layout. All rights reserved.</footer>
+    </div>
+</body>
+</html>

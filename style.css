@@ -1642,6 +1642,59 @@ body {
     border-radius: 6px;
 }
 
+/* ==========================================================================
+   CSS Flexbox Webpage Layout Practice (Desktop & Mobile)
+   ========================================================================== */
+
+.flexbox-site-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.flexbox-header, .flexbox-footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.flexbox-nav {
+    background-color: #444444;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.flexbox-main-container {
+    display: flex;
+    flex: 1;
+}
+
+.flexbox-content {
+    flex: 3;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #1e293b;
+}
+
+.flexbox-sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color: #1e293b;
+}
+
+@media (max-width: 768px) {
+    .flexbox-main-container {
+        flex-direction: column;
+    }
+}
+
+
 
 
 
