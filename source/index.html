@@ -3,127 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Thực hành] Bảng trong CSS</title>
+    <title>Trang Web Cá Nhân</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
+    </header>
 
-    <h1>Bài Thực Hành: Định Kiểu Bảng Trong CSS</h1>
+    <section class="profile">
+        <img src="avatar.jpg" alt="Ảnh đại diện" class="avatar">
+        <p>Xin chào! Tôi là <strong>Nguyễn Văn A</strong>, một lập trình viên yêu thích công nghệ.</p>
+    </section>
 
-    <!-- 1. Đường viền bảng cơ bản (đường viền kép) -->
-    <div class="demo-box">
-        <h2>1. Đường viền bảng cơ bản (border: 1px solid black)</h2>
-        <table class="table-basic">
+    <section class="hobbies">
+        <h2>Sở thích</h2>
+        <ul>
+            <li>Đọc sách</li>
+            <li>Chơi thể thao</li>
+            <li>Lập trình</li>
+            <li>Du lịch</li>
+        </ul>
+    </section>
+
+    <section class="goals">
+        <h2>Mục tiêu học tập</h2>
+        <p>Tôi muốn trở thành một lập trình viên chuyên nghiệp, xây dựng các sản phẩm hữu ích.</p>
+    </section>
+
+    <footer>
+        <h2>Thông tin liên hệ</h2>
+        <table border="1">
             <tr>
-                <th>Họ tên</th>
-                <th>Tuổi</th>
-                <th>Lớp</th>
+                <th>Email</th>
+                <td>nguyenvana@example.com</td>
             </tr>
             <tr>
-                <td>Nguyễn Văn A</td>
-                <td>20</td>
-                <td>Web</td>
-            </tr>
-            <tr>
-                <td>Trần Thị B</td>
-                <td>21</td>
-                <td>Web</td>
+                <th>Facebook</th>
+                <td><a href="#">facebook.com/nguyenvana</a></td>
             </tr>
         </table>
-    </div>
-
-    <!-- 2. Bỏ đường viền kép với border-collapse: collapse -->
-    <div class="demo-box">
-        <h2>2. Gộp đường viền với border-collapse: collapse</h2>
-        <table class="table-collapsed">
-            <tr>
-                <th>Họ tên</th>
-                <th>Tuổi</th>
-                <th>Lớp</th>
-            </tr>
-            <tr>
-                <td>Nguyễn Văn A</td>
-                <td>20</td>
-                <td>Web</td>
-            </tr>
-            <tr>
-                <td>Trần Thị B</td>
-                <td>21</td>
-                <td>Web</td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- 3. Chiều rộng, chiều cao & Căn chỉnh ngang (text-align: left) -->
-    <div class="demo-box">
-        <h2>3. Kích thước (width: 100%, height: 50px) & Căn trái tiêu đề (text-align: left)</h2>
-        <table class="table-custom-align">
-            <tr>
-                <th>Họ tên</th>
-                <th>Tuổi</th>
-                <th>Lớp</th>
-            </tr>
-            <tr>
-                <td>Nguyễn Văn A</td>
-                <td>20</td>
-                <td>Web</td>
-            </tr>
-            <tr>
-                <td>Trần Thị B</td>
-                <td>21</td>
-                <td>Web</td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- 4. Căn chỉnh theo chiều dọc (vertical-align: bottom) -->
-    <div class="demo-box">
-        <h2>4. Căn chỉnh theo chiều dọc (vertical-align: bottom, height: 80px)</h2>
-        <table class="table-vertical-align">
-            <tr>
-                <th>Họ tên</th>
-                <th>Tuổi</th>
-                <th>Lớp</th>
-            </tr>
-            <tr>
-                <td>Nguyễn Văn A</td>
-                <td>20</td>
-                <td>Web</td>
-            </tr>
-            <tr>
-                <td>Trần Thị B</td>
-                <td>21</td>
-                <td>Web</td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- 5. Padding & Màu sắc trong bảng hoàn thiện -->
-    <div class="demo-box">
-        <h2>5. Bảng hoàn thiện với Padding (15px) & Màu sắc (Header #333, Body #f2f2f2)</h2>
-        <table class="table-styled">
-            <tr>
-                <th>Họ tên</th>
-                <th>Tuổi</th>
-                <th>Lớp</th>
-            </tr>
-            <tr>
-                <td>Nguyễn Văn A</td>
-                <td>20</td>
-                <td>Web</td>
-            </tr>
-            <tr>
-                <td>Trần Thị B</td>
-                <td>21</td>
-                <td>Web</td>
-            </tr>
-            <tr>
-                <td>Lê Văn C</td>
-                <td>22</td>
-                <td>Web</td>
-            </tr>
-        </table>
-    </div>
-
+    </footer>
 </body>
 </html>

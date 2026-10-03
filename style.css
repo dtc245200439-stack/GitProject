@@ -1,111 +1,109 @@
-/* ==========================================================================
-   CSS Table Practice - Thực Hành Định Kiểu Bảng Trong CSS
-   ========================================================================== */
-
+/* Định dạng chung */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    padding: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
 }
 
-h1 {
-    color: #0f172a;
-    border-bottom: 3px solid #2563eb;
-    padding-bottom: 0.5rem;
-    margin-bottom: 2rem;
+/* Định dạng tiêu đề */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
 }
 
-h2 {
-    color: #1e293b;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    font-size: 1.2rem;
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
 }
 
-.demo-box {
+/* Định dạng các phần section */
+section {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px;
     background: #ffffff;
     border-radius: 8px;
-    border: 1px solid #e2e8f0;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* 1. Bảng đường viền kép cơ bản */
-.table-basic, .table-basic th, .table-basic td {
-    border: 1px solid black;
-}
-.table-basic {
-    margin-bottom: 1rem;
-}
-
-/* 2. Bảng border-collapse: collapse */
-.table-collapsed {
-    border-collapse: collapse;
-    width: 100%;
-}
-.table-collapsed, .table-collapsed th, .table-collapsed td {
-    border: 1px solid black;
+section h2 {
+    color: #2e7d32;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
-/* 3. Chiều rộng 100% & Chiều cao th 50px & Căn trái tiêu đề */
-.table-custom-align {
-    border-collapse: collapse;
-    width: 100%;
+/* Định dạng ảnh đại diện */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    margin: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-.table-custom-align, .table-custom-align th, .table-custom-align td {
-    border: 1px solid #94a3b8;
-}
-.table-custom-align th {
-    height: 50px;
+
+/* Định dạng danh sách */
+ul {
+    list-style-type: square;
     text-align: left;
-    background-color: #e2e8f0;
-    padding-left: 10px;
-}
-.table-custom-align td {
-    padding-left: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 20px;
 }
 
-/* 4. Căn chỉnh dọc vertical-align: bottom & Height 80px */
-.table-vertical-align {
+ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Định dạng bảng */
+table {
+    margin: auto;
     border-collapse: collapse;
-    width: 100%;
+    width: 60%;
+    background-color: #ffffff;
 }
-.table-vertical-align, .table-vertical-align th, .table-vertical-align td {
-    border: 1px solid #94a3b8;
-}
-.table-vertical-align td {
-    height: 80px;
-    vertical-align: bottom;
+
+th, td {
+    border: 1px solid black;
     padding: 10px;
-}
-
-/* 5. Bảng có Padding 15px & Màu sắc tối ưu */
-.table-styled {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #333;
-}
-
-.table-styled th {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 15px;
     text-align: left;
-    font-size: 0.95rem;
 }
 
-.table-styled td {
-    background-color: #f2f2f2;
-    color: #333333;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
+th {
+    background-color: #4CAF50;
+    color: white;
+    width: 30%;
 }
 
-.table-styled tr:hover td {
-    background-color: #e2e8f0;
+td a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Định dạng footer */
+footer {
+    margin-top: 30px;
+    padding: 25px 20px;
+    background-color: #ddd;
+}
+
+footer h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
 }
