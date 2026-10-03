@@ -1,0 +1,122 @@
+/* ==========================================================================
+   CSS Lists Lab - Định Kiểu Danh Sách HTML Với CSS
+   ========================================================================== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #0f172a;
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #1e293b;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.demo-box {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* 2. List Style Type Square */
+.list-square {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+/* 3. List Style Type Upper Roman */
+.list-roman {
+    list-style-type: upper-roman;
+    padding-left: 1.5rem;
+}
+
+/* 4. List Style Image (Dùng SVG Data URI icon ngôi sao xanh) */
+.list-image {
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="%232563eb"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.784 1.399 8.166L12 18.896l-7.333 3.864 1.399-8.166L.132 9.21l8.2-1.192z"/></svg>');
+    padding-left: 1.5rem;
+}
+
+/* 5. List Style Position (Outside vs Inside) */
+.list-outside {
+    list-style-position: outside;
+    background-color: #f1f5f9;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.list-inside {
+    list-style-position: inside;
+    background-color: #f1f5f9;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+}
+
+/* 6. List Style Shorthand Property */
+.list-shorthand {
+    list-style: square inside;
+    padding: 1rem;
+    background-color: #eff6ff;
+    border-radius: 6px;
+}
+
+/* 7. Colored List with Padding & Margin */
+.colored-list {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 1.5rem 2.5rem;
+    border-radius: 8px;
+    list-style-type: disc;
+}
+
+.colored-list li {
+    margin-bottom: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+/* 8. Bài Tập Tổng Hợp - Lộ Trình Học Lập Trình Web */
+.roadmap-list {
+    list-style: square inside;
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(49, 46, 129, 0.3);
+}
+
+.roadmap-list li {
+    margin: 0.8rem 0;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #818cf8;
+    border-radius: 0 6px 6px 0;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.roadmap-list li:hover {
+    transform: translateX(6px);
+    background: rgba(255, 255, 255, 0.2);
+}
