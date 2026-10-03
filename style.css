@@ -1539,6 +1539,48 @@ body {
 .basis-ex4 .grow-1 { flex-grow: 1; }
 .basis-ex4 .grow-2 { flex-grow: 2; background-color: #38bdf8; color: white; }
 
+/* ==========================================================================
+   CSS flex-grow Property Practice (5 Flex Items)
+   ========================================================================== */
+
+.flex-grow-practice {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    text-align: center;
+}
+
+.grow-container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    border: 2px solid #0f172a;
+    padding: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #f8fafc;
+}
+
+.grow-item {
+    padding: 20px 10px;
+    background-color: lightblue;
+    text-align: center;
+    font-weight: bold;
+    color: #0f172a;
+    border-radius: 6px;
+    flex-grow: 1; /* Mặc định các ô có tỷ lệ phát triển 1 */
+}
+
+.grow-target {
+    flex-grow: 3; /* Ô thứ 2 chiếm không gian phát triển gấp 3 lần các ô khác */
+    background-color: #38bdf8;
+    color: #ffffff;
+}
+
+
 
 
 
