@@ -3,37 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Navigation</title>
+    <title>Trang Chủ Giản Lược</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="sticky-menu">
-        <ul>
-            <li><a href="#home">Trang chủ</a></li>
-            <li><a href="#about">Giới thiệu</a></li>
-            <li><a href="#services">Dịch vụ</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-    </nav>
-    
-    <section id="home">
-        <h1>Chào mừng đến với trang web của chúng tôi</h1>
-        <p>Hãy cuộn xuống để xem hiệu ứng sticky.</p>
-    </section>
-    
-    <section id="about">
-        <h2>Giới thiệu</h2>
-        <p>Nội dung giới thiệu rất dài...</p>
-    </section>
-    
-    <section id="services">
-        <h2>Dịch vụ</h2>
-        <p>Danh sách các dịch vụ...</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Liên hệ</h2>
-        <p>Thông tin liên hệ...</p>
-    </section>
+    <header class="main-header">
+        <h1>Tiêu đề Trang Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <aside class="sidebar left-sidebar">
+            <h3>Sidebar Trái</h3>
+            <ul>
+                <li>Mục 1</li>
+                <li>Mục 2</li>
+                <li>Mục 3</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            2. Nội dung chính của trang
+            <p>Đây là khu vực chứa nội dung quan trọng nhất của trang web. Chúng ta sẽ đặt các bài viết, sản phẩm, hoặc thông tin chi tiết tại đây.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+        </main>
+
+        <aside class="sidebar right-sidebar">
+            <h3>Sidebar Phải</h3>
+            <p>Đây là một sidebar khác, có thể chứa quảng cáo, bài viết liên quan hoặc các widget khác.</p>
+        </aside>
+    </div>
+
 </body>
 </html>
