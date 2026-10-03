@@ -1580,6 +1580,69 @@ body {
     color: #ffffff;
 }
 
+/* ==========================================================================
+   CSS flex-flow Property Practice (Examples 1 & 2)
+   ========================================================================== */
+
+.flex-flow-practice {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    text-align: center;
+}
+
+.flow-section {
+    margin-bottom: 40px;
+}
+
+.flow-section h3 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+/* Ví dụ 1: flex-flow: row nowrap */
+.container-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.container-1 > div {
+    background-color: #007bff;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* Ví dụ 2: flex-flow: row-reverse nowrap */
+.container-2 {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.container-2 > div {
+    background-color: #28a745;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+
 
 
 
