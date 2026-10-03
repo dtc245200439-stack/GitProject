@@ -3,47 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ Giản Lược</title>
+    <title>CartoonHub Kids - Trang Web Xem Hoạt Hình Trực Tuyến</title>
+    <meta name="description" content="Website xem phim hoạt hình tuyển chọn cho trẻ em, thuyết minh tiếng Việt chất lượng HD/FullHD, không quảng cáo.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- 1. HEADER (Fixed Header, Logo bên trái, Head-link, Search) -->
     <header class="main-header">
-        <h1>Tiêu đề Trang Web</h1>
-        <nav>
+        <a href="#" class="logo-box">
+            <span class="logo-icon">🎈</span>
+            <span class="logo-text">CartoonHub Kids</span>
+        </a>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm phim hoạt hình...">
+        </div>
+
+        <nav class="head-link">
             <ul>
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Giới thiệu</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Phim bộ</a></li>
+                <li><a href="#">Phim lẻ</a></li>
+                <li><a href="#">Yêu thích</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="page-container">
-        <aside class="sidebar left-sidebar">
-            <h3>Sidebar Trái</h3>
-            <ul>
-                <li>Mục 1</li>
-                <li>Mục 2</li>
-                <li>Mục 3</li>
+    <!-- 2. CONTENT CONTAINER (Left Content Sidebar & Right Content Main Player) -->
+    <div class="content-wrapper">
+
+        <!-- LEFT CONTENT: Menu hiển thị danh sách video có sẵn -->
+        <aside class="left-content">
+            <div class="playlist-header">
+                <h2>Danh Sách Phim</h2>
+                <select id="sortSelect" class="sort-select">
+                    <option value="latest">Mới cập nhật</option>
+                    <option value="views">Nhiều lượt xem nhất</option>
+                </select>
+            </div>
+
+            <ul class="playlist-menu" id="playlistMenu">
+                <!-- Video Items rendered dynamically via app.js -->
             </ul>
         </aside>
 
-        <main class="main-content">
-            <h2>Nội dung chính của trang</h2>
-            <p>Đây là khu vực chứa nội dung quan trọng nhất của trang web. Chúng ta sẽ đặt các bài viết, sản phẩm, hoặc thông tin chi tiết tại đây.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
+        <!-- RIGHT CONTENT: Khu vực xem video, mặc định hiển thị video đầu tiên -->
+        <main class="right-content">
+            <div class="player-card">
+                <div class="video-player-box">
+                    <iframe id="mainVideoIframe" src="https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&rel=0" allowfullscreen allow="autoplay"></iframe>
+                </div>
+
+                <div class="player-details">
+                    <h1 class="current-title" id="currentVideoTitle">Doraemon Thuyết Minh - Tập 1: Chú Mèo Máy Đến Từ Tương Lai</h1>
+                    
+                    <div class="current-stats">
+                        <span id="currentVideoViews">👁️ 1,250,000 lượt xem</span>
+                        <div>
+                            <span class="badge-hd" id="currentVideoQuality">FullHD 1080p</span>
+                            <span style="margin-left: 0.5rem; background:#10b981; color:white; font-size:0.75rem; font-weight:700; padding:0.2rem 0.6rem; border-radius:4px;">Thuyết Minh Tiếng Việt</span>
+                        </div>
+                    </div>
+
+                    <div class="video-description">
+                        <strong>Mô tả phim:</strong>
+                        <p id="currentVideoDesc" style="margin-top:0.4rem;">Phim hoạt hình Doraemon thuyết minh tiếng Việt chất lượng cao. Câu chuyện về chú mèo máy thông minh Doraemon cùng những bảo bối kỳ diệu cứu giúp Nobita.</p>
+                    </div>
+                </div>
+            </div>
         </main>
 
-        <aside class="sidebar right-sidebar">
-            <h3>Sidebar Phải</h3>
-            <p>Đây là một sidebar khác, có thể chứa quảng cáo, bài viết liên quan hoặc các widget khác.</p>
-        </aside>
     </div>
 
+    <!-- 3. FOOTER: Hiển thị thông tin bản quyền và cam kết an toàn cho trẻ em -->
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#">Điều khoản sử dụng</a>
+            <a href="#">Chính sách nội dung trẻ em</a>
+            <a href="#">Liên hệ bản quyền</a>
+        </div>
+        <p>&copy; 2026 CartoonHub Kids - Website Phim Hoạt Hình An Toàn & Thuyết Minh Tiếng Việt Chất Lượng High Quality.</p>
+    </footer>
+
+    <!-- Interactive JavaScript Engine -->
+    <script src="app.js"></script>
 </body>
 </html>

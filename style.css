@@ -1,105 +1,347 @@
-/* Thiết lập cơ bản */
-html {
-    height: 100%;
+/* ==========================================================================
+   CartoonHub Kids - Modern Online Cartoon Streaming Web App
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --accent-color: #ff4757;
+    --accent-hover: #ff6b81;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --header-height: 65px;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    min-height: 1500px; /* Đặt chiều cao tối thiểu để có thể cuộn trang */
-    padding-top: 70px; /* Điều chỉnh đẩy nội dung xuống dưới Header cố định */
-    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    padding-top: var(--header-height);
 }
 
-/* Header cố định */
+/* 1. Header (Fixed Header) */
 .main-header {
-    position: fixed; /* Đặt header cố định */
-    top: 0; /* Gắn vào cạnh trên của viewport */
-    left: 0; /* Gắn vào cạnh trái của viewport */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-    background-color: #333;
-    color: white;
-    padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    display: flex; /* Dùng Flexbox để căn chỉnh nội dung bên trong */
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    z-index: 1000; /* Đảm bảo header nằm trên các phần tử khác */
-}
-
-.main-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.main-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    z-index: 1000;
 }
 
-.main-header nav ul li {
-    margin-left: 20px;
-}
-
-.main-header nav ul li a {
-    color: white;
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
-    font-weight: bold;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ff4757, #ffa502);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Search Bar */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    width: 320px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* Head-link Navigation */
+.head-link ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.head-link a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s, font-weight 0.2s;
+}
+
+.head-link a:hover {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* 2. Main Page Layout (Flexbox Container) */
+.content-wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    min-height: calc(100vh - var(--header-height) - 80px);
+}
+
+/* Left Content - Cartoon Playlist Menu Sidebar */
+.left-content {
+    flex: 0 0 340px;
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.2rem;
+    border: 1px solid var(--border-color);
+    height: fit-content;
+}
+
+.playlist-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.playlist-header h2 {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+}
+
+.sort-select {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.playlist-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.video-item {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: background-color 0.2s, transform 0.2s;
+    border: 1px solid transparent;
+}
+
+.video-item:hover {
+    background-color: var(--bg-tertiary);
+    transform: translateX(3px);
+}
+
+.video-item.active {
+    background-color: rgba(255, 71, 87, 0.15);
+    border-color: var(--accent-color);
+}
+
+.item-thumb {
+    width: 100px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.video-item:hover .item-title {
+    color: var(--accent-color);
+}
+
+.item-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Right Content - Video Viewing Area */
+.right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.player-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.video-player-box {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    background-color: #000000;
+}
+
+.video-player-box iframe,
+.video-player-box video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.player-details {
+    padding: 1.2rem 1.5rem;
+}
+
+.current-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.current-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.badge-hd {
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.video-description {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background-color: var(--bg-tertiary);
+    padding: 1rem;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+/* 3. Footer */
+.main-footer {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-top: 2rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
     transition: color 0.2s;
 }
 
-.main-header nav ul li a:hover {
-    color: #38bdf8;
+.footer-links a:hover {
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
-/* Container cho bố cục chính (sidebar + nội dung) */
-.page-container {
-    display: flex; /* Kích hoạt Flexbox */
-    justify-content: space-between; /* Đặt khoảng trống giữa các phần tử con */
-    margin: 20px; /* Tạo khoảng cách xung quanh container */
-    gap: 20px; /* Khoảng cách giữa các cột */
+/* 4. Responsive Design (PC, Tablet, Mobile) */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .left-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .search-box {
+        width: 200px;
+    }
 }
 
-.sidebar {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    flex-shrink: 0; /* Ngăn sidebar bị co lại khi không đủ chỗ */
-}
+@media (max-width: 600px) {
+    .main-header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0.8rem;
+        gap: 0.8rem;
+    }
 
-.left-sidebar {
-    width: 200px; /* Chiều rộng cố định cho sidebar trái */
-}
+    body {
+        padding-top: 110px;
+    }
 
-.right-sidebar {
-    width: 200px; /* Chiều rộng cố định cho sidebar phải */
-}
+    .search-box {
+        width: 100%;
+        order: 3;
+    }
 
-.main-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    flex-grow: 1; /* Cho phép nội dung chính chiếm hết không gian còn lại */
-}
-
-/* Các kiểu dáng phụ cho sidebar */
-.sidebar h3 {
-    margin-top: 0;
-    color: #333;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 10px;
-    color: #555;
+    .head-link ul {
+        gap: 0.8rem;
+    }
 }
