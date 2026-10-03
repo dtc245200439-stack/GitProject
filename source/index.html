@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành Tạo Menu Ngang (Horizontal Dropdown Menu)</title>
+    <title>Sticky Navigation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h2 style="margin-bottom: 20px;">Menu Điều Hướng Ngang (Horizontal Dropdown Menu)</h2>
-
-    <div id="menu">
+    <nav class="sticky-menu">
         <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li>
-                <a href="#">Sản phẩm &#9660;</a>
-                <ul>
-                    <li><a href="#">Máy tính</a></li>
-                    <li><a href="#">Điện thoại</a></li>
-                    <li><a href="#">Phụ kiện</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Dịch vụ &#9660;</a>
-                <ul>
-                    <li><a href="#">Bảo hành</a></li>
-                    <li><a href="#">Sửa chữa</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Tin tức</a></li>
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
         </ul>
-    </div>
+    </nav>
+    
+    <section id="home">
+        <h1>Chào mừng đến với trang web của chúng tôi</h1>
+        <p>Hãy cuộn xuống để xem hiệu ứng sticky.</p>
+    </section>
+    
+    <section id="about">
+        <h2>Giới thiệu</h2>
+        <p>Nội dung giới thiệu rất dài...</p>
+    </section>
+    
+    <section id="services">
+        <h2>Dịch vụ</h2>
+        <p>Danh sách các dịch vụ...</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Liên hệ</h2>
+        <p>Thông tin liên hệ...</p>
+    </section>
 
 </body>
 </html>
