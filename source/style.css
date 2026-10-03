@@ -1392,6 +1392,76 @@ body {
     }
 }
 
+/* ==========================================================================
+   CSS flex-wrap Property Practice (nowrap, wrap, wrap-reverse, initial)
+   ========================================================================== */
+
+.flex-practice-wrapper {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    text-align: center;
+}
+
+.flex-section {
+    margin-bottom: 40px;
+}
+
+.flex-section h3 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.flex-container {
+    display: flex;
+    max-width: 600px;
+    min-height: 200px;
+    gap: 10px;
+    border: 2px solid #0f172a;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #f8fafc;
+}
+
+.flex-item {
+    width: 180px;
+    height: 80px;
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #0f172a;
+    border-radius: 6px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-initial {
+    flex-wrap: initial; /* Đưa về mặc định: nowrap */
+    overflow-x: auto;
+}
+
+
 
 
 
