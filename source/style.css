@@ -1184,6 +1184,61 @@ body {
     color: #ffffff;
 }
 
+/* ==========================================================================
+   CSS grid-gap Property Practice (Example 1 & Example 2)
+   ========================================================================== */
+
+.grid-gap-practice {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    text-align: center;
+}
+
+.example-section {
+    margin-bottom: 40px;
+}
+
+.example-section h3 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+/* Ví dụ 1: grid-gap: 20px */
+.grid-gap-ex1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; /* Hoặc gap: 20px */
+}
+
+.grid-gap-ex1 div {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+/* Ví dụ 2: grid-gap: 30px 10px */
+.grid-gap-ex2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 10px; /* Hoặc gap: 30px 10px */
+}
+
+.grid-gap-ex2 div {
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+
 
 
 
