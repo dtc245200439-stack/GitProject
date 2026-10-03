@@ -379,3 +379,87 @@ body {
     clear: both;
 }
 
+/* ==========================================================================
+   Basic Layout Practice (#main, #head, #head-link, #left, #content, #right, #footer)
+   ========================================================================== */
+
+#main {
+    width: 960px;
+    margin: 20px auto;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+}
+
+#head {
+    height: 100px;
+    background-color: #3b82f6;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    margin-bottom: 5px;
+}
+
+#head-link {
+    height: 38px;
+    line-height: 38px;
+    background-color: #e2e8f0;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+#head-link a {
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+#head-link a:hover {
+    color: #2563eb;
+}
+
+#left {
+    width: 200px;
+    min-height: 400px;
+    float: left;
+    background-color: #f8fafc;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-right: 1px solid #e2e8f0;
+}
+
+#content {
+    width: 550px;
+    min-height: 400px;
+    float: left;
+    background-color: #ffffff;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 0 5px 5px 5px;
+}
+
+#right {
+    width: 190px;
+    min-height: 400px;
+    float: right;
+    background-color: #f8fafc;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-left: 1px solid #e2e8f0;
+}
+
+#footer {
+    clear: both;
+    height: 50px;
+    line-height: 50px;
+    background-color: #3b82f6;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
